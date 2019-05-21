@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="estilo.css">
+	<meta charset="utf-8">
+	<title>Time tables (Aritmetica modular)</title>
+</head>
+<body onload="init()">  
+    <div id="principal">
+    <h2>Time tables (Aritmetica modular)</h2>
+        <div class="sabana">
+	        <canvas width="280" height="280" id="dibujito">
+            </canvas>  
+        <div class="barverot"> <input type="range" id="moverx" min="0" max="280" value="140" step="10" />  
+            <p class="minicanvas">Mover</p> 
+            <input type="range" id="movery" min="0" max="380" value="181" step="10" orient="vertical" />      
+            <p class="minicanvas">Zoom</p>  <input type="range" id="radio" min="135" max="960" value="135" step="10" orient="vertical" />
+        </div>
+        <div id="controles">
+            <div id="boxcolor">
+                <p style="txtminiatura">Tablero de des-control</p>           
+                <p>Nodos  <input type="number" id="divisiones" value=564 /></p>
+                <p>Factor  <input type="number" id="tiempo" value=882 /></p>
+                <p><input type="button" value="Ver cambios" id="mostrar" /></p>
+             </div>
+            <div class="columnacolores">
+                <div class="colorespick">
+                    <p><button id="selectorcolor4" class="jscolor {valueElement:'chosen_value4',onFineChange:'setTextColor(this)'}">Color</button>
+                    </p>
+                    <p><input id="chosen_value4" value="#266FCE">
+                    </p>
+                </div>
+                <div class="colorespick">
+                    <p><button id="selectorcolor3" class="jscolor {valueElement:'chosen_value3', onFineChange:'setTextColor(this)'}">Color</button>
+                    </p>
+                    <p><input id="chosen_value3" value="#58B2CE">
+                    </p>
+                </div>      
+            </div>
+            <div class="columnacolores">
+                <div class="colorespick">
+                    <p><button id="selectorcolor2" class="jscolor {valueElement:'chosen_value2', onFineChange:'setTextColor(this)'}">Color</button>
+                    </p>
+                    <p><input id="chosen_value2" value="#437495">
+                    </p>
+                </div>    
+                <div class="colorespick">
+                    <p><button id="selectorcolor" class="jscolor {valueElement:'chosen_value', onFineChange:'setTextColor(this)'}">Color</button>
+                    </p>
+                    <p><input id="chosen_value" value="#A3CBEE">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>      
+    </hr>
+    <div id="columna2"> 
+        <p class="txtmodulo">Apuntes </p>
+        <div class="accordionItem">
+            <h2>Nodos en uso <span id="resultadox11" class="minitext"></span></h2>
+            <div> 
+                <div class="marcointerno">
+                    <p id="resultadox"></p>
+                    <p id="resultadox3"></p>
+                    <p id="resultadox5"></p>
+                    <p id="resultadox2"></p>
+                    <p id="resultadox4"></p>
+                    <p id="resultadox6"></p>
+                    <p id="resultadox7"></p>
+                    <p id="resultadox8"></p>
+                    <p id="resultadox9"></p>
+                    <p id="resultadox10"></p>
+                </div> 
+            </div>
+        </div>   
+        <div class="accordionItem">
+            <h2>Factor en uso <span id="resultado11" class="minitext"></span></h2>
+            <div> 
+                <div class="marcointerno">
+                <p id="resultado"></p>
+                <p id="resultado3"></p>
+                <p id="resultado5"></p>
+                <p id="resultado2"></p>
+                <p id="resultado4"></p>
+                <p id="resultado6"></p>
+                <p id="resultado7"></p>
+                <p id="resultado8"></p>
+                <p id="resultado9"></p>
+                <p id="resultado10"></p>
+                </div> 
+            </div>
+        </div>
+        <div class="accordionItem">
+            <h2>Notas</h2>
+            <div> 
+                <div class="marcointerno">
+                    <p>Usa los controles de la caja amarilla para cambiar los parametros principales de la ecuacion que genera el grafico. Los controles de zoom y mover sirven para indagar en esos oscuros escenarios donde se requieren las herramientas mas sofisticadas.</p>
+                    <p>Nodos = la cantidad puntos equidistantes sobre la circunferencia desde donde nacen y a donde llegan las lineas.</p>
+                    <p>Factor = Tomamos un nodo arbitrario sobre la circunferencia y lo marcamos como inicio, en nuestro ejemplo es la parte inferior del dibujito, elegimos una direccion y enúmeramos cada nodo, multiplicamos cada número por el Factor y trazamos una linea uniendo los nodos originales con los nodos producto.</p>
+                    <p>Si tienes dudas el video puede ser de ayuda... y en la parte inferior apareceran algunos datos de interes sobre los números que elijas usar.</p>
+                </div>
+            </div>
+        </div>   
+        <div class="accordionItem">
+            <h2>Spoiler</h2>
+            <div>
+                <div class="marcointerno">
+                    <p>Cabe aclarar que el algoritmo aun no funciona como se esperaba, pues existe un desfase. 
+                    <div id="codigo"> 
+                        <p>var angulito = parseFloat(360 / (nodos));</p>
+                        <p>for (l = 1; l <= nodos; l++)</p>
+                        <p>{</p>
+                        <p>angulo = ((angulito) * l) ;</p>
+                        <p>xi = moverx + radio * (Math.sin(angulo));</p>
+                        <p>yi = movery + radio * (Math.cos(angulo));</p>
+                        <p>xf = moverx + radio * (Math.sin(factor * angulo));</p>
+                        <p>yf = movery + radio * (Math.cos(factor * angulo));</p>
+                        <p>dibujarLinea('#'+colorcito,xi,yi,xf,yf);</p>
+                        <p>}</p>
+                    </div>  
+                </div>     
+            </div>
+        </div>  
+    </div>
+    <div id="columna3">
+        <div class="video">
+            <p class="txtmodulo">Proyectos de otras personas</p>
+            <iframe width="260" height="146" src="https://www.youtube.com/embed/qhbuKbxJsk8" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="video">    
+            <iframe width="260" height="146" src="https://www.youtube.com/embed/b2b54sM5xA4" frameborder="0" allowfullscreen></iframe>
+        </div>         
+        <div class="video">          
+            <iframe width="260" height="146" src="https://www.youtube.com/embed/Hu7dxBLWlGc" frameborder="0" allowfullscreen></iframe>
+        </div> 
+        <div id="numerobox" class="pruebas">
+            <input type="number" id="limite" value=1234391 />
+            <input type="button" value="Ver divisores" id="mostrar" />
+        </div>
+        <div class="pruebas">
+            <p>Ancho imagen  <input type="number" id="ckanvaswidth" value=320 /></p>
+            <p>Alto imagen  <input type="number" id="ckanvasheight" value=320 /></p>
+            <p>Radio (zoom) <input type="number" id="radioold" value=160 /></p>
+        </div>
+    </div>
+    <script src="dibujocirculos.js"></script> 
+    <script> function setTextColor(picker) {document.getElementsByTagName('pruebas')[0].style.color = '#' + picker.toString()}</script>
+</body>
+</html>

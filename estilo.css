@@ -1,0 +1,225 @@
+body {
+    background-color: #FCFCFC;
+    text-align:center;
+    font-size:12px;
+    font-family:'Roboto','sans serif','lucida';
+    }
+  .barverot{
+    display:inline-block;
+    vertical-align:top;
+    padding:20px 20px 0 0;
+    /* padding-left:5px;*/
+    width:30px;
+    }
+  .minicanvas{
+    margin-left:10px;
+    width:40px;
+    font-size:0.6rem;
+    line-height:0.7rem;
+    text-align:center;
+  }
+  .minitext{
+    font-size:0.6rem;
+    line-height:0.7rem;
+  }
+  #moverx{
+    width:40px;
+    display:inline-block;
+  }
+  #movery{
+    margin-left:10px;
+    width:40px;
+    display:inline-block;
+  }
+  #radio{
+    margin-left:10px;
+    width:40px;
+    height:40px;
+  }
+  #chosen_value{
+    width:60px;
+  }
+  #chosen_value2{
+    width:60px;
+  }
+  #chosen_value3{
+    width:60px;
+  }
+  #chosen_value4{
+    width:60px;
+  }
+  .colorespick{
+    text-align:right;
+    width:80px;
+   /*  display:inline-block;*/
+    vertical-align:top;
+    margin-right:10px;
+  }
+  input[type=range] {
+   /*removes default webkit styles*/
+    -webkit-appearance: none;
+   /*fix for FF unable to apply focus style bug */
+    border: 1px solid white;
+   /*required for proper track sizing in FF*/
+    max-height: 70px;
+    max-width:70px;
+  }
+  .columnacolores{
+    display:inline-block;
+  }
+  .accordionItem h2 { 
+    margin: 0; 
+    font-size: 1.1em; 
+    padding: 0.4em; 
+    color: #444; 
+    background-color: #F4F5C4; 
+    border-bottom: 1px solid #E5E6B8; 
+  }
+  .accordionItem h2:hover { 
+    cursor: pointer; 
+  }
+  .accordionItem div { 
+    margin: 0; 
+    padding: 0.3rem 0.7rem; 
+    background-color: #EFF5A1; 
+    border-bottom: 1px solid #E5E6B8; 
+  }
+  .accordionItem.hide h2 { 
+    color: #fff; 
+    background-color: #444; 
+  }
+  .accordionItem.hide div { 
+    display: none; 
+  }
+  .txtminiatura{
+    font-size:0.5rem;
+    text-align:center;
+  }
+  .txtmodulo{
+    font-size:0.7rem;
+    text-align:right;
+  }
+  #textote{
+    text-align:right;
+    display:inline-block;
+  }
+  #boxcolor{
+    background-color:#F4F5C4;
+    border:1px solid #E5E6B8;
+    padding:0 10px;
+    margin:13px 5px 0 5px;
+    width:120px;
+    display:inline-block;
+  }
+  #columna2{
+    display:inline-block;
+    width:280px;
+    padding:25px 10px 10px 10px;
+    vertical-align:top;
+    text-align:right;
+  }
+  .marcointerno{
+    text-align:right;
+    width:240px;
+  }
+  #columna3{
+    display:inline-block;
+    width:300px;
+   /*padding:45px 20px 20px 20px;*/
+    vertical-align:top;
+    /*  text-align:right;*/
+  }
+  .barvert{
+    display:inline-block;
+    vertical-align:top;
+    padding-top:20px;
+    text-align:center;
+    padding-right:15px;
+  }
+  #rangehz{
+    display:inline-block;
+    vertical-align:top;
+    text-align:right;
+  }
+  .controlinferior{
+    width:95px;
+  }
+  .minitextabajo{  
+    text-align:center;
+    font-size:0.6rem;
+    line-height:0.7rem;
+    width:65px;}
+  .sabana{
+    display:inline-block;
+  }
+  .video {
+    display:inline-block;
+    /*width:280px;*/
+    padding-top:25px;
+    vertical-align:top;
+  }
+  #controlescanvas{
+    /*  padding-right:10px;*/
+    text-align:right;
+    display:inline-block;
+    width:20%;
+  }
+  #codigo{
+    text-align:left;
+    padding:5px 10px 5px 20px;
+    font-size:0.7rem;
+    background-color:#362424;
+    color:#fafafa;
+    font-family:"courier";
+  }
+  #principal{
+    display:inline-block;
+    text-align:right;
+  }
+  #controles{
+    text-align:left;
+    vertical-align:top;
+    padding-top:20px;
+  }
+  .desplazay{
+    margin-top:30px;
+    margin-left:20px;
+  }
+  .pruebas{
+    display:none;
+    /*display:block;*/
+  }
+  #resultado3{
+    color:red;
+  }
+  #divisiones{
+    width:50px;
+  }
+  #tiempo{
+    width:50px;
+  }
+  #resultado9{
+    display:none;
+  }
+  #resultado{
+    font-size:2.6rem;
+    line-height:1.1rem;
+    color:green;
+  }
+  #contenedoracord{
+    text-align:right;
+    display:inline-block;
+    max-width:280px;
+  }
+  #resultadox3{
+    color:red;
+  }
+  #resultadox9{
+    display:none;
+  }
+  #resultadox{
+    font-size:2.6rem;
+    line-height:1.1rem;
+    color:green;
+  }
+    
